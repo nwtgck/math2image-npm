@@ -15,6 +15,8 @@ const svg2png  = require('svg2png');
 program
     .option('-o --output-file [FILE]', "Output file name")
     .option('-p --to-png', "Output png or not")
+    .option('--png-width [N]', "Width of png image")
+    .option('--png-height [N]', "Width of png image")    
     .parse(process.argv);
 
 mjAPI.config({
@@ -51,7 +53,12 @@ function isInputFileSpecified(){
 
     let outdata = null;
     if(program.toPng){
-        outdata = await svg2png(data.svg, {width: 300, height: undefined}); // TODO Hard code
+        if(program.pngWidth == undefined && program.pngHeight == undefined){
+            console.error("Error: Should specify at least one of --png-width or --png-height");
+            process.exit(1);
+        }
+        // Convert svg to png
+        outdata = await svg2png(data.svg, {width: program.pngWidth, height: program.pngHeight});
     } else {
         outdata = data.svg;
     }
