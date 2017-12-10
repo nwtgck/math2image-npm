@@ -10,9 +10,13 @@ const process  = require('process');
 const getStdin = require('get-stdin');
 const mjAPI    = require('mathjax-node');
 const program  = require('commander');
+const svg2png  = require('svg2png');
 
 program
     .option('-o --output-file [FILE]', "Output file name")
+    .option('-p --to-png', "Output png or not")
+    .option('--png-width [N]', "Width of png image")
+    .option('--png-height [N]', "Width of png image")    
     .parse(process.argv);
 
 mjAPI.config({
@@ -46,14 +50,27 @@ function isInputFileSpecified(){
         svg: true,
       }
     );
+
+    let outdata = null;
+    if(program.toPng){
+        if(program.pngWidth == undefined && program.pngHeight == undefined){
+            console.error("Error: Should specify at least one of --png-width or --png-height");
+            process.exit(1);
+        }
+        // Convert svg to png
+        outdata = await svg2png(data.svg, {width: program.pngWidth, height: program.pngHeight});
+    } else {
+        outdata = data.svg;
+    }
+
     if(!isInputFileSpecified() && program.outputFile == undefined){
         // Output to stdout
-        console.log(data.svg);
+        await process.stdout.write(outdata);
     } else {
         // Decide file path
-        const outFilePath =  program.outputFile || `${program.args[0]}.svg`
+        const outFilePath =  program.outputFile || `${program.args[0]}.${program.toPng ? 'png': 'svg' }`
         // Write to a file
-        await fse.writeFile(outFilePath, data.svg);
+        await fse.writeFile(outFilePath, outdata);
         console.log(`Saved to ${outFilePath}`);
     }   
 })();
