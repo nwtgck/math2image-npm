@@ -1,3 +1,6 @@
+#!/usr/bin/env node
+
+// (from: https://qiita.com/takayukioda/items/a149bc2907ef77121229)
 // (from: http://cartman0.hatenablog.com/entry/2017/05/14/172311)
 
 const fs       = require('fs');

@@ -2,6 +2,9 @@
   "name": "math2image",
   "version": "0.1.0-SNAPSHOT",
   "description": "Math image maker",
+  "bin": {
+    "math2image": "main.js"
+  },
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
