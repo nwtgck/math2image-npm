@@ -1,6 +1,6 @@
 {
   "name": "math2image",
-  "version": "0.1.0-SNAPSHOT",
+  "version": "0.1.0",
   "description": "Math image maker",
   "bin": {
     "math2image": "main.js"
