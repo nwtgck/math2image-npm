@@ -4,6 +4,7 @@
     "target": "ES5",
     "module": "commonjs",
     "declaration": true,
+    "noImplicitAny": true,
     "outDir": "./dist",
     "lib": [ "es2015" ]
   }
