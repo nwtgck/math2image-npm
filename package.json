@@ -1,0 +1,15 @@
+{
+  "name": "math2image",
+  "version": "0.1.0-SNAPSHOT",
+  "description": "Math image maker",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ryo Ota",
+  "license": "MIT",
+  "dependencies": {
+    "get-stdin": "^5.0.1",
+    "mathjax-node": "^1.2.1"
+  }
+}
