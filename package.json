@@ -1,16 +1,26 @@
 {
   "name": "math2image",
-  "version": "0.2.0",
+  "version": "0.2.1-SNAPSHOT-3",
   "description": "Math image maker",
   "bin": {
-    "math2image": "main.js"
+    "math2image": "dist/main.js"
   },
-  "main": "main.js",
+  "main": "dist/main.js",
+  "types": "dist/main.d.ts",
   "scripts": {
+    "build": "tsc",
+    "prepublish": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ryo Ota",
   "license": "MIT",
+  "devDependencies": {
+    "@types/commander": "^2.12.2",
+    "@types/fs-extra": "^4.0.5",
+    "@types/get-stdin": "^5.0.1",
+    "@types/svg2png": "^4.1.0",
+    "typescript": "^2.6.2"
+  },
   "dependencies": {
     "commander": "^2.12.2",
     "fs-extra": "^4.0.3",
