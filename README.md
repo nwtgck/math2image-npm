@@ -1,0 +1,45 @@
+# math2image
+
+CLI tool to create SVG math image
+
+## Installation
+
+```bash
+npm install -g math2image
+```
+
+### Usages
+
+#### from stdin
+
+```bash
+echo "e^{i \pi} + 1 = 0" | math2image > euler-identity.svg
+```
+<img src="demo_svgs/euler-identity.svg" height="50">
+
+#### from a file
+
+```bash
+math2image sample7.math.tex
+```
+
+
+`sample7.math.tex`
+
+```tex
+% (from: https://en.wikibooks.org/wiki/LaTeX/Mathematics)
+f(n) =
+\begin{cases}
+  n/2       & \quad \text{if } n \text{ is even}\\
+  -(n+1)/2  & \quad \text{if } n \text{ is odd}
+\end{cases}
+```
+
+<img src="demo_svgs/sample7.math.tex.svg" height="50">
+
+
+#### from a file specifying output name
+
+```bash
+math2image -o output.svg sample7.math.tex
+```
