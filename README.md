@@ -30,6 +30,12 @@ math2image sample7.math.tex
 math2image -o output.svg sample7.math.tex
 ```
 
+#### save as .png
+
+```bash
+math2image --to-png --png-width=500 sample7.math.tex
+```
+
 ##### `sample7.math.tex`
 
 ```tex
