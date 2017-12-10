@@ -43,3 +43,7 @@ f(n) =
 ```bash
 math2image -o output.svg sample7.math.tex
 ```
+
+## My Note
+
+[MYNOTE.md](MYNOTE.md)
