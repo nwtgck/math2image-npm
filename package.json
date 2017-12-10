@@ -1,6 +1,6 @@
 {
   "name": "math2image",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Math image maker",
   "bin": {
     "math2image": "main.js"
@@ -15,6 +15,7 @@
     "commander": "^2.12.2",
     "fs-extra": "^4.0.3",
     "get-stdin": "^5.0.1",
-    "mathjax-node": "^1.2.1"
+    "mathjax-node": "^1.2.1",
+    "svg2png": "^4.1.1"
   }
 }
