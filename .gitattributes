@@ -1,3 +1,6 @@
 #  Ignore on GitHub
 demo_svgs/* linguist-vendored
 sample_texs/* linguist-vendored
+
+# main.ts has a shebang, "#!/usr/bin/env node", so it is regarded as JS
+main.ts linguist-language=TypeScript
