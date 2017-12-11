@@ -1,0 +1,15 @@
+# (from: https://github.com/codecov/example-node/blob/master/.travis.yml)
+language: node_js
+sudo: false
+node_js:
+  - "4"
+install:
+  - npm install
+script:
+  - npm build
+  - npm link
+
+  # ==== Just working-test ====
+
+  # Output to stdout
+  - echo "e^{i \pi} + 1 = 0" | math2image
