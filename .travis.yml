@@ -9,10 +9,22 @@ node_js:
 install:
   - npm install
 script:
+  # Build this project
   - npm run build
-  - npm link
+  # Install math2image to global
+  - npm install -g .
 
   # ==== Just working-test ====
 
   # Output to stdout
   - echo "e^{i \pi} + 1 = 0" | math2image
+
+  # From a file
+  - math2image sample_texs/sample7.math.tex
+
+  # from a file specifying output name
+  - math2image -o output.svg sample_texs/sample7.math.tex
+
+  # save as .png
+  - math2image --to-png --png-width=500 sample_texs/sample7.math.tex
+
