@@ -2,6 +2,13 @@
   "name": "math2image",
   "version": "0.2.1",
   "description": "Math image maker",
+  "keywords": [
+    "math",
+    "latex",
+    "image",
+    "svg",
+    "cli"
+  ],
   "bin": {
     "math2image": "dist/main.js"
   },
