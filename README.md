@@ -1,6 +1,6 @@
 # math2image
 
-[![npm](https://img.shields.io/npm/v/math2image.svg)](https://www.npmjs.com/package/math2image)
+[![npm](https://img.shields.io/npm/v/math2image.svg)](https://www.npmjs.com/package/math2image) [![Build Status](https://travis-ci.org/nwtgck/math2image-npm.svg?branch=develop)](https://travis-ci.org/nwtgck/math2image-npm)
 
 CLI tool to create SVG math image
 
