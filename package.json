@@ -10,10 +10,10 @@
     "cli"
   ],
   "bin": {
-    "math2image": "dist/main.js"
+    "math2image": "dist/src/main.js"
   },
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main.d.ts",
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
