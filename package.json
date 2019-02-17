@@ -17,15 +17,21 @@
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
+    "build-pkg": "npm run build && pkg --out-path=pkg-dist --targets=node10-mac-x64,node10-linux-x64,node10-alpine-x64,node10-win-x64 .",
+    "remove-shebang-from-bundle": "sed -i -e 's/#!\\/usr\\/bin\\/env node/\\/\\/#!\\/usr\\/bin\\/env node/g' dist/main.js",
+    "bundle": "parcel build dist/src/main.js --target=node --bundle-node-modules --no-cache && npm run remove-shebang-from-bundle",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Ryo Ota",
   "license": "MIT",
+  "assets": [ "node_modules/mathjax/**/*", "node_modules/mathjax/unpacked/jax/input/TeX/config.js" ],
   "devDependencies": {
     "@types/commander": "^2.12.2",
     "@types/fs-extra": "^5.0.4",
     "@types/get-stdin": "^5.0.1",
     "@types/svg2png": "^4.1.0",
+    "parcel-bundler": "^1.11.0",
+    "pkg": "^4.3.7",
     "typescript": "^3.0.3"
   },
   "dependencies": {
