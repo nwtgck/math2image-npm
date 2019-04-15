@@ -31,7 +31,7 @@
   "dependencies": {
     "commander": "^2.12.2",
     "fs-extra": "^7.0.0",
-    "get-stdin": "^6.0.0",
+    "get-stdin": "^7.0.0",
     "mathjax-node": "^2.1.1",
     "svg2png": "^4.1.1"
   }
