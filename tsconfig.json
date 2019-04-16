@@ -5,7 +5,18 @@
     "module": "commonjs",
     "declaration": true,
     "noImplicitAny": true,
-    "outDir": "./dist",
+    "outDir": "dist",
+    "rootDir": "./",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["types/*"]
+    },
     "lib": [ "es2015" ]
-  }
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/*"
+  ]
 }

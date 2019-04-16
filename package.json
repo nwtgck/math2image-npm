@@ -1,6 +1,6 @@
 {
   "name": "math2image",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Math image maker",
   "keywords": [
     "math",
@@ -10,10 +10,10 @@
     "cli"
   ],
   "bin": {
-    "math2image": "dist/main.js"
+    "math2image": "dist/src/main.js"
   },
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
+  "main": "dist/src/main.js",
+  "types": "dist/src/main.d.ts",
   "scripts": {
     "build": "tsc",
     "prepublish": "npm run build",
@@ -23,16 +23,15 @@
   "license": "MIT",
   "devDependencies": {
     "@types/commander": "^2.12.2",
-    "@types/fs-extra": "^4.0.5",
-    "@types/get-stdin": "^5.0.1",
+    "@types/fs-extra": "^5.0.4",
     "@types/svg2png": "^4.1.0",
-    "typescript": "^2.6.2"
+    "typescript": "^3.0.3"
   },
   "dependencies": {
     "commander": "^2.12.2",
-    "fs-extra": "^4.0.3",
-    "get-stdin": "^5.0.1",
-    "mathjax-node": "^1.2.1",
+    "fs-extra": "^7.0.0",
+    "get-stdin": "^7.0.0",
+    "mathjax-node": "^2.1.1",
     "svg2png": "^4.1.1"
   }
 }
