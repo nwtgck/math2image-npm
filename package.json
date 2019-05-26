@@ -1,7 +1,7 @@
 {
   "name": "math2image",
   "version": "0.2.4-SNAPSHOT",
-  "description": "Math image maker",
+  "description": "CLI for generating beautiful SVG/PNG mathematical image",
   "keywords": [
     "math",
     "latex",
