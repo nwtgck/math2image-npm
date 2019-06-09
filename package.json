@@ -28,7 +28,7 @@
     "typescript": "^3.5.1"
   },
   "dependencies": {
-    "fs-extra": "^7.0.0",
+    "fs-extra": "^8.0.1",
     "get-stdin": "^7.0.0",
     "mathjax-node": "^2.1.1",
     "svg2png": "^4.1.1",
