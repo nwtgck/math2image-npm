@@ -24,7 +24,7 @@
   "devDependencies": {
     "@types/fs-extra": "^7.0.0",
     "@types/svg2png": "^4.1.0",
-    "@types/yargs": "^13.0.0",
+    "@types/yargs": "^13.0.2",
     "typescript": "^3.5.2"
   },
   "dependencies": {
