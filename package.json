@@ -22,7 +22,7 @@
   "author": "Ryo Ota",
   "license": "MIT",
   "devDependencies": {
-    "@types/fs-extra": "^8.1.0",
+    "@types/fs-extra": "^9.0.4",
     "@types/svg2png": "^4.1.0",
     "@types/yargs": "^15.0.11",
     "typescript": "^4.0.3"
