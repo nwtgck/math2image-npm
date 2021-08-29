@@ -1,0 +1,33 @@
+name: Node CI
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    strategy:
+      matrix:
+        node-version: [12.x, 14.x, 16.x]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2.4.0
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm ci
+    - run: npm run build
+    - run: npm install -g .
+    - name: Operational test
+      run: |
+        # Output to stdout
+        echo "e^{i \pi} + 1 = 0" | math2image
+
+        # From a file
+        math2image sample_texs/sample7.math.tex
+
+        # from a file specifying output name
+        math2image -o output.svg sample_texs/sample7.math.tex
+
+        # save as .png
+        math2image --to-png --png-width=500 sample_texs/sample7.math.tex

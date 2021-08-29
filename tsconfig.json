@@ -10,8 +10,7 @@
     "baseUrl": ".",
     "paths": {
       "*": ["types/*"]
-    },
-    "lib": [ "es2015" ]
+    }
   },
   "include": [
     "src/**/*"
