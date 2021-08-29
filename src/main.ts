@@ -43,7 +43,7 @@ function isInputFileSpecified(): boolean {
 (async function () {
   let mathStr = null;
   if (isInputFileSpecified()) {
-    const filePath = args._[0];
+    const filePath = args._[0] as string;
     const exists = await fse.pathExists(filePath);
     if (exists) {
       mathStr = await fse.readFile(args._[0]);
